@@ -35,15 +35,15 @@ const IndexPage = () => {
         <div className="md:mr-4 h-28 w-28 text-7xl flex md:justify-center items-center justify-start">
           📜
         </div>
-        <h1 className="text-2xl font-extrabold text-black md:text-5xl">
+        <h1 className="text-2xl font-extrabold text-black md:text-5xl dark:text-white">
           互联网实习秋招避坑手册
         </h1>
       </div>
-      <div className="mt-8 text-gray-900">
+      <div className="mt-8 text-gray-900 dark:text-white">
         <p className="mt-2">
           <a
-            href="https://github.com/Dreamacro/clash/wiki/configuration#proxy-providers"
-            className="text-yellow-700 transition hover:text-yellow-600 underline"
+            href="https://github.com/HUSTLab/hustlab.github.io"
+            className="text-yellow-700 transition hover:text-yellow-600 underline dark:text-blue-400  dark:hover:text-blue-300"
           >
             互联网实习秋招避坑手册
           </a>{' '}
@@ -86,7 +86,9 @@ const IndexPage = () => {
               <span className="badge mr-2">{item.city}</span>
             </div>
             <p className="mb-3">{item.condition}</p>
-            <p className="text-gray-500">数据更新于：{item.time}</p>
+            <p className="text-gray-500 dark:text-gray-300">
+              数据更新于：{item.time}
+            </p>
           </div>
         </div>
       ))}

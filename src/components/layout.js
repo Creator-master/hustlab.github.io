@@ -18,7 +18,7 @@ const Layout = ({ children }) => (
         © {new Date().getFullYear()}, Built with
         {` `}
         <a
-          className="text-yellow-700 transition hover:text-yellow-600 underline"
+          className="text-yellow-700 transition hover:text-yellow-600 underline dark:text-blue-400  dark:hover:text-blue-300"
           href="https://www.gatsbyjs.com"
         >
           Gatsby
