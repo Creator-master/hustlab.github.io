@@ -32,17 +32,6 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
 
-      - run: |
-          node script.js
-      - name: Push new collections
-        uses: github-actions-x/commit@v2.6
-        with:
-          github-token: ${{ secrets.ACCESS_TOKEN }}
-          commit-message: "(Auto) push new job collection"
-          rebase: 'true'
-          name: 'GitHub Action'
-          email: 'actions@github.com'
-
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -57,6 +46,16 @@ jobs:
 
       - run: |
           yarn install
+      - run: |
+          node script.js
+      - name: Push new collections
+        uses: github-actions-x/commit@v2.6
+        with:
+          github-token: ${{ secrets.ACCESS_TOKEN }}
+          commit-message: "(Auto) push new job collection"
+          rebase: 'true'
+          name: 'GitHub Action'
+          email: 'actions@github.com'
       
       - run: |
           yarn build --prefix-paths
