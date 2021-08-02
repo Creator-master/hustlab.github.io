@@ -1,12 +1,15 @@
-## Cycling
+# 📜 互联网实习秋招避坑手册
 
-记录我从上海——武汉的骑行之旅。
+由华科 19 级软硕同学发起，通过分发问卷，调研了已实习同学的实习经历。主要收集房租、上下班时间、加班情况、公司福利、团队氛围、所做业务、是否受政策影响等等几个方面的信息，帮助其他同学应对接下来的秋招，也给即将实习的同学做一份参考。
 
-![2a4f6758-d6eb-4196-8bf8-0550816f43ec](https://mayandev.oss-cn-hangzhou.aliyuncs.com/uPic/2a4f6758-d6eb-4196-8bf8-0550816f43ec.png)
+## 本地开发
 
-当前位置使用 [iOS 快捷方式](https://www.icloud.com/shortcuts/bf39fcf4736444a9a7c184232520bf78)自动上传，使用教程请参考这篇[文章](https://github.com/yihong0618/gitblog/issues/198)。
+```bash
+git clone https://github.com/HUSTLab/job-hunt-guide
+cd job-hunt-guide
+yarn && yarn start
+```
 
-## Reference
+## 参与贡献
 
-- [running-page](https://github.com/yihong0618/running_page)
-- [巧妙利用 iOS 的快捷指令配合 GitHub Actions 实现自动化](https://github.com/yihong0618/gitblog/issues/198)
+Fork 此项目，编辑 [collection.csv 文件](https://github.com/HUSTLab/job-hunt-guide/edit/main/collection.csv)，发送一个 PR 到主仓库，合入后网站会自动更新部署。

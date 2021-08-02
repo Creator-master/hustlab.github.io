@@ -16,16 +16,6 @@ on:
       - src/**.jsx
       - src/**.scss
       - src/**.json
-  workflow_dispatch:
-    inputs:
-      latitude:
-        description: 'Latitude'
-      longitude:
-        description: 'Longitude'
-      address:
-        description: 'Address'
-      time:
-        description: 'Time'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -36,49 +26,19 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.6
-      - name: Configure pip cache
-        uses: actions/cache@v1
-        id: pip-cache
-        with:
-          path: venv
-          key: pip-1-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            pip-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-        if: steps.pip-cache.outputs.cache-hit != 'true'
-      - name: Run sync Strava script
-        run: |
-          python scripts/strava_sync.py ${{ secrets.STRAVA_CLIENT_ID }} ${{ secrets.STRAVA_CLIENT_SECRET }} ${{ secrets.STRAVA_CLIENT_REFRESH_TOKEN }}
-      - name: Push new ride
-        uses: github-actions-x/commit@v2.6
-        with:
-          github-token: ${{ secrets.ACCESS_TOKEN }}
-          commit-message: "Add new rides"
-          rebase: 'true'
-          name: 'GitHub Action'
-          email: 'actions@github.com'
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
-      
+
       - run: |
-          node script.js '${{ github.event.inputs.latitude }}' '${{ github.event.inputs.longitude }}' '${{ github.event.inputs.address }}' '${{ github.event.inputs.time }}'
-      - name: Push new ride
+          node script.js
+      - name: Push new collections
         uses: github-actions-x/commit@v2.6
         with:
           github-token: ${{ secrets.ACCESS_TOKEN }}
-          commit-message: "Add new rides"
+          commit-message: "(Auto) push new job collection"
           rebase: 'true'
           name: 'GitHub Action'
           email: 'actions@github.com'

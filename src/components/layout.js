@@ -7,38 +7,26 @@
 
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
-  return (
-    <>
-      <div className="flex flex-col items-center justify-center min-h-screen">
-        <main className="flex flex-col items-start flex-1 max-w-4xl px-4 py-8 md:py-12">
-          {children}
-        </main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
+const Layout = ({ children }) => (
+  <>
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <main className="flex flex-col items-start flex-1 max-w-4xl px-4 py-8 md:py-12">
+        {children}
+      </main>
+      <footer className="mt-4">
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a
+          className="text-yellow-700 transition hover:text-yellow-600 underline"
+          href="https://www.gatsbyjs.com"
         >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  );
-};
+          Gatsby
+        </a>
+      </footer>
+    </div>
+  </>
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

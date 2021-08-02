@@ -1,9 +1,9 @@
 module.exports = {
   pathPrefix: '/cycling',
   siteMetadata: {
-    title: '秋招避坑手册',
-    description: '一份',
-    author: '@mayandev',
+    title: '互联网实习秋招避坑手册',
+    description: '互联网实习秋招避坑手册',
+    author: '@hustlab',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

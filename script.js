@@ -1,21 +1,13 @@
 const fs = require('fs');
-const originPosition = require('./src/static/position.json');
+const csv = require('csvtojson');
 
-const [latitude, longitude, address, time] = process.argv.slice(2);
-
-console.log(latitude, 'test');
-
-if (latitude) {
-  originPosition.push({
-    latitude: Number(latitude),
-    longitude: Number(longitude),
-    address,
-    time,
-  });
+async function transformData() {
+  const jsonArray = await csv().fromFile('./collection.csv');
+  fs.writeFileSync(
+    './src/static/collection.json',
+    JSON.stringify(jsonArray),
+    'utf-8'
+  );
 }
 
-fs.writeFileSync(
-  './src/static/position.json',
-  JSON.stringify(originPosition),
-  'utf-8'
-);
+transformData();
