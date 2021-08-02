@@ -5,11 +5,11 @@
 ## 本地开发
 
 ```bash
-git clone https://github.com/HUSTLab/job-hunt-guide
-cd job-hunt-guide
+git clone https://github.com/HUSTLab/hustlab.github.io
+cd hustlab.github.io
 yarn && yarn start
 ```
 
 ## 参与贡献
 
-Fork 此项目，编辑 [collection.csv 文件](https://github.com/HUSTLab/job-hunt-guide/edit/main/collection.csv)，发送一个 PR 到主仓库，合入后网站会自动更新部署。
+点击右上角 Fork 此项目，编辑 [collection.csv 文件](https://github.com/HUSTLab/job-hunt-guide/edit/main/collection.csv)，逗号分割列表的每一列内容。发送一个 PR 到主仓库，合入后网站会自动更新部署。
