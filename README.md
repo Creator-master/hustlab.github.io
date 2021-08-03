@@ -12,4 +12,4 @@ yarn && yarn start
 
 ## 参与贡献
 
-点击右上角 Fork 此项目，编辑 [collection.csv 文件](https://github.com/HUSTLab/job-hunt-guide/edit/main/collection.csv)，逗号分割列表的每一列内容。发送一个 PR 到主仓库，合入后网站会自动更新部署。
+点击右上角 Fork 此项目，编辑 [collection.csv 文件](https://github.com/HUSTLab/job-hunt-guide/edit/main/collection.csv)，逗号（英文）分割列表的每一列内容。发送一个 PR 到主仓库，合入后网站会自动更新部署。

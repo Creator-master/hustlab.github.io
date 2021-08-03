@@ -14,7 +14,7 @@ const Layout = ({ children }) => (
       <main className="flex flex-col items-start flex-1 max-w-4xl px-4 py-8 md:py-12">
         {children}
       </main>
-      <footer className="mt-4">
+      <footer className="mb-4">
         © {new Date().getFullYear()}, Built with
         {` `}
         <a

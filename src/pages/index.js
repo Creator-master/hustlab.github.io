@@ -62,7 +62,14 @@ const IndexPage = () => {
             互联网实习秋招避坑手册
           </a>{' '}
           最初由华科 19
-          级软硕同学发起，通过分发问卷，调研了已实习同学的实习经历。主要收集房租、上下班时间、加班情况、公司福利、团队氛围、所做业务、是否受政策影响等等几个方面的信息，帮助其他同学应对接下来的秋招，也给即将实习的同学做一份参考。
+          级软硕同学发起，通过分发问卷，调研了已实习同学的实习经历。主要收集房租、上下班时间、加班情况、公司福利、团队氛围、所做业务、是否受政策影响等等几个方面的信息，帮助其他同学应对接下来的秋招，也给即将实习的同学做一份参考。你也可以{' '}
+          <a
+            href="https://github.com/HUSTLab/hustlab.github.io#%E5%8F%82%E4%B8%8E%E8%B4%A1%E7%8C%AE"
+            className="text-yellow-700 transition hover:text-yellow-600 underline dark:text-blue-400  dark:hover:text-blue-300"
+          >
+            提交内容
+          </a>{' '}
+          参与贡献。
         </p>
       </div>
       <div className="flex w-full mt-4 flex-col items-center gap-4 sm:flex-row">
