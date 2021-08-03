@@ -39,7 +39,21 @@ const IndexPage = () => {
           互联网实习秋招避坑手册
         </h1>
       </div>
-      <div className="mt-8 text-gray-900 dark:text-white">
+      <div className="mt-6 flex gap-4 items-center">
+        <a href="https://github.com/HUSTLab/hustlab.github.io">
+          <img
+            alt="GitHub Repo stars"
+            src="https://img.shields.io/github/stars/hustlab/hustlab.github.io?style=social"
+          />
+        </a>
+        <a href="https://github.com/HUSTLab/hustlab.github.io">
+          <img
+            src="https://visitor-badge.glitch.me/badge?page_id=hustlab.github.io"
+            alt="visitor badge"
+          />
+        </a>
+      </div>
+      <div className="mt-6 text-gray-900 dark:text-white">
         <p className="mt-2">
           <a
             href="https://github.com/HUSTLab/hustlab.github.io"
@@ -51,7 +65,7 @@ const IndexPage = () => {
           级软硕同学发起，通过分发问卷，调研了已实习同学的实习经历。主要收集房租、上下班时间、加班情况、公司福利、团队氛围、所做业务、是否受政策影响等等几个方面的信息，帮助其他同学应对接下来的秋招，也给即将实习的同学做一份参考。
         </p>
       </div>
-      <div className="flex w-full mt-4 flex-row items-center gap-4">
+      <div className="flex w-full mt-4 flex-col items-center gap-4 sm:flex-row">
         {selectPageData.map((item, index) => (
           <select
             key={index}
@@ -60,7 +74,7 @@ const IndexPage = () => {
             }}
             defaultValue=""
             required
-            className="select select-bordered max-w-xs w-1/3 flex-1"
+            className="select select-bordered w-full flex-1 text-base"
           >
             <option value="" disabled="disabled">
               {item.name}
