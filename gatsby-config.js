@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/job-hunt-guide',
+  pathPrefix: '/',
   siteMetadata: {
     title: '互联网实习秋招避坑手册',
     description: '互联网实习秋招避坑手册',
