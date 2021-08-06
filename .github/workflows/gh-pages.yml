@@ -55,6 +55,7 @@ jobs:
         uses: github-actions-x/commit@v2.6
         with:
           github-token: ${{ secrets.ACCESS_TOKEN }}
+          push-branch: 'main'
           commit-message: "(Auto) push new job collection"
           rebase: 'true'
           name: 'GitHub Action'
