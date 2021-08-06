@@ -56,8 +56,8 @@ jobs:
         with:
           github-token: ${{ secrets.ACCESS_TOKEN }}
           push-branch: 'main'
+          force-add: 'true'
           commit-message: "(Auto) push new job collection"
-          rebase: 'true'
           name: 'GitHub Action'
           email: 'actions@github.com'
       
